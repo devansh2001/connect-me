@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-router.route('/test').get((request, response) => {
+router.route('/').get((request, response) => {
     response.json({'response' : 'Hello, World!'});
 });
 
