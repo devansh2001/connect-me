@@ -44,7 +44,7 @@ class TypeMessageBox extends Component {
 
     render() {
         return (
-            <div className={'type-message-box'}>
+            <div className={'fixed-bottom type-message-box'}>
                 <Form >
                     <Form.Row>
                         <Col>
