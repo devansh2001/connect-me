@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.chatting-window {
+  margin: 20px;
+}
+
+.type-message-box {
+  margin: 20px;
+}
