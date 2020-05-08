@@ -10,15 +10,26 @@ class TypeMessageBox extends Component {
         }
     }
 
-    handleSubmit = async (e) => {
-        console.log(this.state.message);
+    handleSubmit = (e) => {
+        var string = this.state.message;
+        string = string.trim();
+        this.setState({
+            message: string
+        });
+        // Call API to send the message here
+
+        // Next line flushes the message upon successful sending
+        this.setState({
+            message: ''
+        });
+        console.log(string);
     };
 
     handleChange = (e) => {
         let currMessage = e.target.value;
-        this.state = {
+        this.setState({
             message: currMessage
-        }
+        });
     };
 
     render() {
@@ -32,6 +43,7 @@ class TypeMessageBox extends Component {
                                 as={"textarea"}
                                 placeholder={"Type your message..."}
                                 rows={3}
+                                value={this.state.message}
                             />
                         </Col>
                         <Col sm={1}>
