@@ -6,7 +6,8 @@ class TypeMessageBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            message: ''
+            message: '',
+            isSendDisabled: true
         }
     }
 
@@ -20,15 +21,24 @@ class TypeMessageBox extends Component {
 
         // Next line flushes the message upon successful sending
         this.setState({
-            message: ''
+            message: '',
+            isSendDisabled: true
         });
         console.log(string);
     };
 
+
     handleChange = (e) => {
         let currMessage = e.target.value;
+        var shouldDisableSend = this.state.isSendDisabled;
+        if (currMessage === '') {
+            shouldDisableSend = true;
+        } else {
+            shouldDisableSend = false;
+        }
         this.setState({
-            message: currMessage
+            message: currMessage,
+            isSendDisabled: shouldDisableSend
         });
     };
 
@@ -47,7 +57,13 @@ class TypeMessageBox extends Component {
                             />
                         </Col>
                         <Col sm={1}>
-                            <Button onClick={this.handleSubmit} variant={'primary'}>Send</Button>
+                            <Button
+                                onClick={this.handleSubmit}
+                                variant={'primary'}
+                                disabled={this.state.isSendDisabled}
+                            >
+                                Send
+                            </Button>
                         </Col>
                     </Form.Row>
                 </Form>
