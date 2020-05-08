@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04a8d704-1994-429d-b81f-565147323864" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/ChattingWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/ChattingWindow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/right-pane/TypeMessageBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/right-pane/TypeMessageBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/react/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/index.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/right-pane/TypeMessageBox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="463">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -209,12 +207,12 @@
       <updated>1588544549427</updated>
       <workItem from="1588544551394" duration="2289000" />
       <workItem from="1588894925955" duration="317000" />
-      <workItem from="1588895381733" duration="2265000" />
+      <workItem from="1588895381733" duration="2317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4871000" />
+    <option name="totallyTimeSpent" value="4923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -343,8 +341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/right-pane/TypeMessageBox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="463">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

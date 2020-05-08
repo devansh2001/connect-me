@@ -34,7 +34,7 @@ class TypeMessageBox extends Component {
                                 rows={3}
                             />
                         </Col>
-                        <Col lg={1}>
+                        <Col sm={1}>
                             <Button onClick={this.handleSubmit} variant={'primary'}>Send</Button>
                         </Col>
                     </Form.Row>
