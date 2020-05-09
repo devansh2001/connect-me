@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Col} from 'react-bootstrap';
+import {Card, Row, Col, Image} from 'react-bootstrap';
 
 class Contact extends Component {
     constructor(props) {
@@ -9,19 +9,27 @@ class Contact extends Component {
     render() {
         return (
             <div>
+                {/*<Container>*/}
                 <Card className={'text-left'}>
-                    <Col>
-                        <Card.Img variant="top" src="https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-                    </Col>
-                    <Col>
-                        <Card.Body>
-                            <Card.Title>{this.props.name} (<i>{this.props.username}</i>)</Card.Title>
-                            <Card.Text>
-                                > {this.props.lastMessage}
-                            </Card.Text>
-                        </Card.Body>
-                    </Col>
+                    <Row>
+                        <Col xs={6} md={4}>
+                            <Image className={'contact-image'} roundedCircle src="https://president.gatech.edu/sites/default/files/images/cabrera-headshot.jpg" fluid />
+                        </Col>
+                        <Col>
+                            <Card.Body>
+                                <Row>
+                                    <Card.Title>{this.props.name} (<i>{this.props.username}</i>)</Card.Title>
+                                </Row>
+                                <Row>
+                                    <Card.Text>
+                                        > {this.props.lastMessage}
+                                    </Card.Text>
+                                </Row>
+                            </Card.Body>
+                        </Col>
+                    </Row>
                 </Card>
+                {/*</Container>*/}
             </div>
         );
     }

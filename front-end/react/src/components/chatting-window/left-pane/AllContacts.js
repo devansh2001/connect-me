@@ -8,7 +8,7 @@ class AllContacts extends Component {
         this.state = {
             contacts: [
                 {
-                    name: 'Devansh Ponda',
+                    name: 'Devansh  Ponda',
                     username: 'dponda',
                     lastMessage: 'FRIENDS forever <3!'
                 },

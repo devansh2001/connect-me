@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04a8d704-1994-429d-b81f-565147323864" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/ChattingWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/ChattingWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/AllContacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/AllContacts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/Contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/react/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/index.css" afterDir="false" />
     </list>
@@ -18,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/Contact.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+            <state relative-caret-position="390">
+              <caret line="15" column="158" selection-start-line="15" selection-start-column="158" selection-end-line="15" selection-end-column="158" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -30,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/AllContacts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="-185">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -45,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front-end/react/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="567">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -82,10 +81,10 @@
         <option value="$PROJECT_DIR$/front-end/react/public/index.html" />
         <option value="$PROJECT_DIR$/front-end/react/src/App.js" />
         <option value="$PROJECT_DIR$/front-end/react/src/components/chatting-window/right-pane/TypeMessageBox.js" />
-        <option value="$PROJECT_DIR$/front-end/react/src/index.css" />
         <option value="$PROJECT_DIR$/front-end/react/src/components/chatting-window/ChattingWindow.js" />
-        <option value="$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/Contact.js" />
+        <option value="$PROJECT_DIR$/front-end/react/src/index.css" />
         <option value="$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/AllContacts.js" />
+        <option value="$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/Contact.js" />
       </list>
     </option>
   </component>
@@ -221,12 +220,12 @@
       <workItem from="1588544551394" duration="2289000" />
       <workItem from="1588894925955" duration="317000" />
       <workItem from="1588895381733" duration="3558000" />
-      <workItem from="1588987417281" duration="1877000" />
+      <workItem from="1588987417281" duration="2402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9061000" />
+    <option name="totallyTimeSpent" value="9586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -358,25 +357,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front-end/react/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="567">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/Contact.js">
+    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/AllContacts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        <state relative-caret-position="-185">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/AllContacts.js">
+    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/chatting-window/left-pane/Contact.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="390">
+          <caret line="15" column="158" selection-start-line="15" selection-start-column="158" selection-end-line="15" selection-end-column="158" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
