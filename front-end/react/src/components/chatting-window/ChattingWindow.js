@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import TypeMessageBox from "./right-pane/TypeMessageBox";
 import Contact from "./left-pane/Contact";
+import AllContacts from "./left-pane/AllContacts";
 import {Row, Col, Container} from 'react-bootstrap';
 
 class ChattingWindow extends Component {
     render() {
         return (
             <div className={'chatting-window'}>
-                <Container>
+                {/*<Container>*/}
                     <Row>
                         <Col xs={3}>
-                            <Contact/>
+                            <AllContacts/>
                         </Col>
                         <Col xs={9}>
                             {/* insert the current user info component from issue 21 here*/}
@@ -18,7 +19,7 @@ class ChattingWindow extends Component {
                             <TypeMessageBox/>
                         </Col>
                     </Row>
-                </Container>
+                {/*</Container>*/}
             </div>
         )
     }
