@@ -26,6 +26,11 @@ class AllContacts extends Component {
                     name: 'Prerna Ravi',
                     username: 'pravi',
                     lastMessage: 'Sorry I zoned out :('
+                },
+                {
+                    name: 'George P Burdell',
+                    username: 'THWG',
+                    lastMessage: 'Testing if the message is cut if its too long'
                 }
             ]
         }

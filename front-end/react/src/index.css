@@ -27,3 +27,7 @@ code {
 .contact-image {
   margin: 10px;
 }
+
+.contact-last-message {
+  color: #696969;
+}

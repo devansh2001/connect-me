@@ -2,9 +2,18 @@ import React, {Component} from 'react';
 import {Card, Row, Col, Image} from 'react-bootstrap';
 
 class Contact extends Component {
+    maxAllowableChars = 22;
     constructor(props) {
         super(props);
     }
+
+    formatLastMessageString = (message) => {
+        if (message.length > this.maxAllowableChars) {
+            return message.substring(0, this.maxAllowableChars) + "..."
+        } else {
+            return message;
+        }
+    };
 
     render() {
         return (
@@ -22,7 +31,9 @@ class Contact extends Component {
                                 </Row>
                                 <Row>
                                     <Card.Text>
-                                        > {this.props.lastMessage}
+                                        <p className={'contact-last-message'}>
+                                            > {this.formatLastMessageString(this.props.lastMessage)}
+                                        </p>
                                     </Card.Text>
                                 </Row>
                             </Card.Body>
