@@ -55,8 +55,10 @@ class AllContacts extends Component {
     render() {
         return (
             <div>
-                <Container>
+                <Container className={'all-contacts-container'}>
+                    <br/>
                     {this.generateContactCards()}
+                    <br/>
                 </Container>
             </div>
         );

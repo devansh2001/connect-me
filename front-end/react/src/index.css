@@ -31,3 +31,8 @@ code {
 .contact-last-message {
   color: #696969;
 }
+
+.all-contacts-container {
+  /*padding: 5px;*/
+  background-color: #0d2b68;
+}
