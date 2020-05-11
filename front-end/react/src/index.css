@@ -35,4 +35,6 @@ code {
 .all-contacts-container {
   /*padding: 5px;*/
   background-color: #0d2b68;
+  height: 100vh;
+  overflow: scroll;
 }

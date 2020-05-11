@@ -31,6 +31,31 @@ class AllContacts extends Component {
                     name: 'George P Burdell',
                     username: 'THWG',
                     lastMessage: 'Testing if the message is cut if its too long'
+                },
+                {
+                    name: 'Devansh  Ponda',
+                    username: 'dponda',
+                    lastMessage: 'FRIENDS forever <3!'
+                },
+                {
+                    name: 'Vatsal Trivedi',
+                    username: 'vtrivedi',
+                    lastMessage: 'Chai + Quarantine'
+                },
+                {
+                    name: 'Varun Kulkarni',
+                    username: 'vkulkarni',
+                    lastMessage: 'Dripping Swagg'
+                },
+                {
+                    name: 'Prerna Ravi',
+                    username: 'pravi',
+                    lastMessage: 'Sorry I zoned out :('
+                },
+                {
+                    name: 'George P Burdell',
+                    username: 'THWG',
+                    lastMessage: 'Testing if the message is cut if its too long'
                 }
             ]
         }
