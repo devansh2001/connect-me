@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {CardGroup, CardDeck, Row, Col, Container} from 'react-bootstrap';
+import {Row, Container} from 'react-bootstrap';
 import Contact from "./Contact";
 
 class AllContacts extends Component {
@@ -41,7 +41,7 @@ class AllContacts extends Component {
 
         let list = [];
         for (let index = 0; index < userData.length; index++) {
-            const card = <div className={'contact-card'}><Row><Contact
+            const card = <div className={'contact-card'} id={userData[index]['username']} onClick={this.handleClick}><Row><Contact
                 name={userData[index]['name']}
                 username={userData[index]['username']}
                 lastMessage={userData[index]['lastMessage']}
@@ -52,7 +52,19 @@ class AllContacts extends Component {
         return list;
     }
 
+    handleClick = (e) => {
+        // this is the username of contact on which the user has clicked
+        const selectedUser = e.currentTarget.id;
+
+        // Write code here to change the UI for the chats display element to show the chat history with the chat 'selectedUser'
+        // For now I have just console logged it
+        // We need API calls here
+
+        console.log(selectedUser + " was selected");
+    };
+
     render() {
+
         return (
             <div>
                 <Container className={'all-contacts-container'}>

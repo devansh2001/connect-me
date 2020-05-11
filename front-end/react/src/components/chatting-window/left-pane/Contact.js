@@ -17,9 +17,10 @@ class Contact extends Component {
 
     render() {
         return (
-            <div>
+            <div >
                 {/*<Container>*/}
-                <Card className={'text-left'}>
+                <a style={{ cursor: 'pointer' }}>
+                <Card className={'text-left'} >
                     <Row>
                         <Col xs={6} md={4}>
                             <Image className={'contact-image'} roundedCircle src="https://president.gatech.edu/sites/default/files/images/cabrera-headshot.jpg" fluid />
@@ -40,6 +41,7 @@ class Contact extends Component {
                         </Col>
                     </Row>
                 </Card>
+                </a>
                 {/*</Container>*/}
             </div>
         );
