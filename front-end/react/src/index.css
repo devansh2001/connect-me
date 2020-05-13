@@ -19,3 +19,22 @@ code {
 .type-message-box {
   margin: 20px;
 }
+
+.contact-card {
+  margin: 10px;
+}
+
+.contact-image {
+  margin: 10px;
+}
+
+.contact-last-message {
+  color: #696969;
+}
+
+.all-contacts-container {
+  /*padding: 5px;*/
+  background-color: #0d2b68;
+  height: 95vh;
+  overflow: scroll;
+}
