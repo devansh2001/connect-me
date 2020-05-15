@@ -14,7 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 const testRouter = require('./routes/test');
+const sendMessageRouter = require('./routes/SendMessage');
+
 app.use('/test', testRouter);
+app.use('/send-message', sendMessageRouter);
 
 // starts listening
 app.listen(port, () => {
