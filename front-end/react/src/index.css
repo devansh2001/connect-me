@@ -31,10 +31,47 @@ code {
 .contact-last-message {
   color: #696969;
 }
+.search-bar {
+  margin-top: 15px;
+}
+.search-bar-container {
+  background-color:#0d2b68;
+  height: 80px;
+  
+}
+.search-icon {
+  color: white;
+  font-size: 25px;
+  margin-top: 15px;
+  position: relative;
+  margin-right:2px;
+ 
+}
+.search-format {
+  margin-left: 10px;
+  margin-right: 0px;
+  margin-top: 10px;
+  
+}
+.Connect-me-text-format {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #0d2b68;
+  margin-top: 20px;
+}
+.connect-me-container {
+  background-color: #0d2b68;
+  height: 50px;
+  font-size: 30;
+  
+}
 
 .all-contacts-container {
   /*padding: 5px;*/
   background-color: #0d2b68;
   height: 95vh;
   overflow: scroll;
+  
 }
