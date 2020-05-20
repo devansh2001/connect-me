@@ -56,6 +56,7 @@ class CurrentChat extends Component {
                     {  
                         text: {
                             fontSize: 20,
+                            color : 'black'
                         },
                         chatbubble: {
                             borderRadius: 40,
