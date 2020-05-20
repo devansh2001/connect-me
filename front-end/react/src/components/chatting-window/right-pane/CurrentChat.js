@@ -55,12 +55,13 @@ class CurrentChat extends Component {
                     bubbleStyles= {
                     {  
                         text: {
-                            fontSize: 20,
-                            color : 'black'
+                            fontSize: 18,
+                            color : 'black',
+                            fontWeight: 400
                         },
                         chatbubble: {
                             borderRadius: 40,
-                            padding: 20,
+                            padding: 15,
                            
                         }, 
                     }}         
