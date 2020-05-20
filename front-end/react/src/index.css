@@ -80,3 +80,33 @@ code {
   height: 82vh;
   overflow: scroll;
 }
+.form-group {
+  width: 400px;
+  margin:auto;
+}
+.email-label, .password-label {
+  font-size: 20px;
+  width: 400px;
+  text-align: left;
+  font-weight: 600;
+}
+.button-width-controller {
+  width: 400px;
+  margin:auto;
+}
+.parent-window {
+  height: 60vh;
+  margin-top: 80px;
+  background-color: white;
+  border-radius: 35px;
+}
+.parent-width-controller {
+  width: 500px;
+  margin: auto;
+  padding: auto;
+}
+.log-in-page {
+  background-color: #0d2b68;
+  width: 100vw;
+    height: 100vh;
+}
