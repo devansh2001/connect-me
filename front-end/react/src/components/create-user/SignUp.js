@@ -56,6 +56,9 @@ class SignUp extends Component {
         });
         
     };
+    handleSubmit = () => {
+        //insert code here later
+    };
 
     render() {
         return (
@@ -67,10 +70,8 @@ class SignUp extends Component {
             <Container className= "parent-sign-window">
             <form>
                 <br></br>
-                
                 <h3>Sign Up</h3>
-                <br>
-                </br>
+                <br></br>
                 <div className="form-group">
                     <label className="firstName-label">First Name</label>
                     <Form.Control 
