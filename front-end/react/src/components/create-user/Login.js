@@ -44,11 +44,11 @@ class Login extends Component {
     render() {
         return (
             <div className="log-in-page">
-            <div className="parent-width-controller"> 
+            <div className="parent-width-log-controller"> 
             <br></br>
             <Row>
             <ConnectMe/>    
-            <Container className= "parent-window">
+            <Container className= "parent-log-window">
             <form>
                 <br></br>
                 <br></br>
