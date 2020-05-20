@@ -80,3 +80,48 @@ code {
   height: 82vh;
   overflow: scroll;
 }
+.form-group {
+  width: 400px;
+  margin:auto;
+}
+.firstName-label,
+.lastName-label,
+.userName-label,
+.email-label, 
+.password-label {
+  font-size: 20px;
+  width: 400px;
+  text-align: left;
+  font-weight: 600;
+}
+.button-width-controller {
+  width: 400px;
+  margin:auto;
+}
+.parent-log-window {
+  height: 60vh;
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 35px;
+}
+.parent-width-log-controller {
+  width: 500px;
+  margin: auto;
+  padding: auto;
+}
+.sign-up-page, .log-in-page {
+  background-color: #0d2b68;
+  width: 100vw;
+    height: 100vh;
+}
+.parent-sign-window {
+  height: 85vh;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 35px;
+}
+.parent-width-sign-controller {
+  width: 500px;
+  margin: auto;
+  padding: auto;
+}
