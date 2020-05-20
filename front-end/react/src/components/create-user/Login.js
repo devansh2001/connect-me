@@ -47,7 +47,7 @@ class Login extends Component {
             <div className="parent-width-controller"> 
             <br></br>
             <Row>
-            <ConnectMe/>
+            <ConnectMe/>    
             <Container className= "parent-window">
             <form>
                 <br></br>
