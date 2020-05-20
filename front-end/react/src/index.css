@@ -71,7 +71,12 @@ code {
 .all-contacts-container {
   /*padding: 5px;*/
   background-color: #0d2b68;
-  height: 95vh;
+  height: 80vh;
   overflow: scroll;
   
+}
+
+.chat-feed-container {
+  height: 82vh;
+  overflow: scroll;
 }
