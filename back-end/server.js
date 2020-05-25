@@ -29,7 +29,15 @@ app.use('/test', testRouter);
 app.use('/send-message', sendMessageRouter);
 
 io.on('connection', socket => {
+   console.log(socket.id);
    console.log('Client connected');
+
+   socket.on('my_event', () => {
+      // once we get a 'change color' event from one of our clients, we will send it to the rest of the clients
+      // we make use of the socket.emit method again with the argument given to use from the callback function above
+      console.log('Server logging triggered event');
+      io.sockets.emit('my_event');
+   });
 
    socket.on('disconnect', () => {
       console.log('Client disconnected');

@@ -2,15 +2,41 @@ import React, {Component} from 'react';
 import TypeMessageBox from "./right-pane/TypeMessageBox";
 import Contact from "./left-pane/Contact";
 import AllContacts from "./left-pane/AllContacts";
-import {Row, Col, Container} from 'react-bootstrap';
+import {Row, Col, Container, Button} from 'react-bootstrap';
+import socketIOClient from "socket.io-client";
 
 class ChattingWindow extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            endpoint: 'http://localhost:8080'
+        }
+    }
+
+    eventSender = () => {
+        console.log('Button pressed');
+
+        const socket = socketIOClient(this.state.endpoint);
+        socket.emit('my_event', () => {
+            console.log('Event sent by client');
+        })
+    };
+
+
     render() {
+
+        const socket = socketIOClient(this.state.endpoint);
+        socket.on('my_event', () => {
+            console.log('Event Registered by client');
+        });
+
         return (
             <div className={'chatting-window'}>
                 {/*<Container>*/}
                     <Row>
                         <Col xs={3}>
+                            <Button onClick={this.eventSender} value={'Bt'}/>
                             <AllContacts/>
                         </Col>
                         <Col xs={9}>
