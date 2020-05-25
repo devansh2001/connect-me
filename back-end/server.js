@@ -28,8 +28,13 @@ const sendMessageRouter = require('./routes/SendMessage');
 app.use('/test', testRouter);
 app.use('/send-message', sendMessageRouter);
 
+let clients = new Map();
+
 io.on('connection', socket => {
    console.log(socket.id);
+   console.log(socket.handshake.query.data);
+   clients.set(socket.handshake.query.data, socket.id);
+   console.log(clients);
    console.log('Client connected');
 
    socket.on('my_event', () => {
@@ -40,6 +45,8 @@ io.on('connection', socket => {
    });
 
    socket.on('disconnect', () => {
+      clients.delete(socket.handshake.query.data);
+      console.log(clients);
       console.log('Client disconnected');
    })
 });

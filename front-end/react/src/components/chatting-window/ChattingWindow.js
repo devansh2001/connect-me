@@ -10,14 +10,19 @@ class ChattingWindow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            endpoint: 'http://localhost:8080'
+            endpoint: 'http://localhost:8080',
+            temp: {
+                'data': 'devanshponda'
+            }
         }
     }
 
     eventSender = () => {
         console.log('Button pressed');
 
-        const socket = socketIOClient(this.state.endpoint);
+        const socket = socketIOClient(this.state.endpoint, {
+            'query': this.state.temp
+        });
         socket.emit('my_event', () => {
             console.log('Event sent by client');
         })
@@ -26,7 +31,9 @@ class ChattingWindow extends Component {
 
     render() {
 
-        const socket = socketIOClient(this.state.endpoint);
+        const socket = socketIOClient(this.state.endpoint, {
+            'query': this.state.temp
+        });
         socket.on('my_event', () => {
             console.log('Event Registered by client');
         });
