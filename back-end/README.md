@@ -26,6 +26,7 @@ ConnectMe Server is running on port: 8080
    * The following HTTP Requests are supported on the test endpoint: `GET`, `POST`, and `DELETE`.  Note that `DELETE` will execute a "delete all" to clear the testing collection on MongoDB
 
 #### Programming for New Collections
+* Remember that Mongo is a non-relational database, so you post JSON with key value pairs.  These are organized into collections
 * The examples in `routes/test-db.js` are relatively self explanatory in terms of format, but there are some things to remember:
     * Use Mongoose Schema when constructing your HTTP endpoints.  Schemas are JSON templates that detail the layout and type of the data. It makes the process of creating endpoints much easier as you can do `<Schema>.<dbFunction>` to make sure that the specific collection is referenced properly and will have a consistent data scheme
     * The main database functions I would think would be used are generally `find` for searching, `save` for pushing to the database, `deleteOne` and `deleteMany` for deletions.  Beyond these, I would look at MongoDB documentation
