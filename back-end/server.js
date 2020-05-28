@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
-const port = 8080;
+const port = process.env.port || 8080;
 
 //mongodb atlas configuration
 const connectionString = "mongodb+srv://connect123:connect123@connect-me-xh3xg.mongodb.net/test?retryWrites=true&w=majority";
