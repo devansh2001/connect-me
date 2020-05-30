@@ -30,18 +30,21 @@ app.use('/send-message', sendMessageRouter);
 
 let clients = new Map();
 
-io.on('connection', socket => {
-   console.log(socket.id);
-   console.log(socket.handshake.query.data);
+io.on('connect', socket => {
    clients.set(socket.handshake.query.data, socket.id);
    console.log(clients);
-   console.log('Client connected');
 
-   socket.on('my_event', () => {
-      // once we get a 'change color' event from one of our clients, we will send it to the rest of the clients
-      // we make use of the socket.emit method again with the argument given to use from the callback function above
+   console.log('Client connected');
+   socket.emit('Yo wassup', socket.id);
+
+   socket.on('my_event',() => {
+      socket.emit('Yo wassup', socket.id);
       console.log('Server logging triggered event');
-      io.sockets.emit('my_event');
+      // console.log("/#" + clients.get('dwiti'));
+      // console.log(io.sockets);
+      console.log("Sending to : " + 'devanshponda' + " - " + clients.get('devanshponda'));
+      io.to(clients.get('devanshponda')).emit('my_event');
+      // io.sockets.emit('my_event');
    });
 
    socket.on('disconnect', () => {

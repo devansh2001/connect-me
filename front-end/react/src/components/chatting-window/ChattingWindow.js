@@ -9,33 +9,48 @@ class ChattingWindow extends Component {
 
     constructor(props) {
         super(props);
+        var name = Math.random() < 0.5 ? 'devanshponda' : 'dwiti';
         this.state = {
-            endpoint: 'http://localhost:8080',
+            endpoint: 'http://localhost:8080/',
             temp: {
-                'data': 'devanshponda'
+                'data': name
             }
-        }
+        };
+        this.socket = socketIOClient(this.state.endpoint, {
+            'query': this.state.temp
+        });
+        console.log(this.state.temp.data);
     }
 
     eventSender = () => {
         console.log('Button pressed');
 
-        const socket = socketIOClient(this.state.endpoint, {
-            'query': this.state.temp
-        });
-        socket.emit('my_event', () => {
-            console.log('Event sent by client');
-        })
+        // const socket = socketIOClient(this.state.endpoint, {
+        //     'query': this.state.temp
+        // });
+
+        this.socket.emit('my_event');
     };
 
 
     render() {
 
-        const socket = socketIOClient(this.state.endpoint, {
-            'query': this.state.temp
-        });
-        socket.on('my_event', () => {
+        // const socket = socketIOClient(this.state.endpoint, {
+        //     'query': this.state.temp
+        // });
+        this.socket.on('my_event', () => {
             console.log('Event Registered by client');
+        });
+        this.socket.on('Yo wassup', (idx) => {
+            console.log("Known: " + this.socket.id);
+            console.log("New: " + idx);
+            console.log('GOTCHA');
+        });
+        this.socket.on('hey', () => {
+            console.log('PLZ work');
+        });
+        this.socket.on('I just met you', () => {
+            console.log('PLZ work yaar');
         });
 
         return (
