@@ -31,24 +31,27 @@ app.use('/send-message', sendMessageRouter);
 let clients = new Map();
 
 io.on('connect', socket => {
-   clients.set(socket.handshake.query.data, socket.id);
+   clients.set(socket.handshake.query.name, socket.id);
    console.log(clients);
 
    console.log('Client connected');
-   socket.emit('Yo wassup', socket.id);
+   // socket.emit('Yo wassup', socket.id);
 
-   socket.on('my_event',() => {
-      socket.emit('Yo wassup', socket.id);
+   socket.on('message_to_server', (info) => {
+      console.log(info);
+      console.log(socket.id);
+      // socket.emit('Yo wassup', socket.id);
       console.log('Server logging triggered event');
       // console.log("/#" + clients.get('dwiti'));
       // console.log(io.sockets);
-      console.log("Sending to : " + 'devanshponda' + " - " + clients.get('devanshponda'));
-      io.to(clients.get('devanshponda')).emit('my_event');
+      console.log("Sending to : " + info['to'] + " - " + clients.get(info['to']));
+
+      io.to(clients.get(info['to'])).emit('message_to_client', info);
       // io.sockets.emit('my_event');
    });
 
    socket.on('disconnect', () => {
-      clients.delete(socket.handshake.query.data);
+      clients.delete(socket.handshake.query.name);
       console.log(clients);
       console.log('Client disconnected');
    })

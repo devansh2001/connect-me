@@ -18,6 +18,7 @@ class TypeMessageBox extends Component {
             message: string
         });
         // Call API to send the message here
+        this.props.sendMessageHandler(this.state.message);
 
         // Next line flushes the message upon successful sending
         this.setState({
