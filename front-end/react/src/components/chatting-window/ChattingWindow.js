@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import TypeMessageBox from "./right-pane/TypeMessageBox";
+import CurrentChat from "./right-pane/CurrentChat";
 import Contact from "./left-pane/Contact";
 import AllContacts from "./left-pane/AllContacts";
 import {Row, Col, Container, Button} from 'react-bootstrap';
 import socketIOClient from "socket.io-client";
+import SearchBar from "./left-pane/SearchBar";
+import ConnectMe from "./left-pane/ConnectMe"
+
 
 class ChattingWindow extends Component {
 
@@ -75,13 +79,16 @@ class ChattingWindow extends Component {
                 {/*<Container>*/}
                     <Row>
                         <Col xs={3}>
-                            <Button onClick={this.eventSender} value={'Bt'}/>
-                            <p>{this.state.username.name}</p>
-                            <AllContacts currentChateeChangeHandler={this.updateCurrentChat}/>
+                            <Row >
+                                <p>{this.state.username.name}</p>
+                                <ConnectMe />
+                                <SearchBar/>
+                                <AllContacts currentChateeChangeHandler={this.updateCurrentChat}/>
+                            </Row>  
                         </Col>
                         <Col xs={9}>
                             {/* insert the current user info component from issue 21 here*/}
-                            {/* insert the recent chats component from issue 22 here*/}
+                            <CurrentChat />
                             <TypeMessageBox sendMessageHandler={this.updateMessageInfo}/>
                         </Col>
                     </Row>
