@@ -35,19 +35,15 @@ io.on('connect', socket => {
    console.log(clients);
 
    console.log('Client connected');
-   // socket.emit('Yo wassup', socket.id);
 
    socket.on('message_to_server', (info) => {
-      console.log(info);
-      console.log(socket.id);
-      // socket.emit('Yo wassup', socket.id);
+      // console.log(info);
+      // console.log(socket.id);
+      socket.emit('magic_event', socket.id);
       console.log('Server logging triggered event');
-      // console.log("/#" + clients.get('dwiti'));
-      // console.log(io.sockets);
       console.log("Sending to : " + info['to'] + " - " + clients.get(info['to']));
 
       io.to(clients.get(info['to'])).emit('message_to_client', info);
-      // io.sockets.emit('my_event');
    });
 
    socket.on('disconnect', () => {

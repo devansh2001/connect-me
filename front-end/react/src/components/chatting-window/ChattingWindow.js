@@ -28,19 +28,21 @@ class ChattingWindow extends Component {
         console.log(this.state.username);
     }
 
-    updateMessageInfo = (message) => {
+    updateMessageInfo = async (messageObj) => {
         console.log('updating message');
-        this.setState({
+        console.log(messageObj);
+        await this.setState({
             messageInfo: {
-                'message': message['message']
+                'message': messageObj
             }
-        })
+        });
+        await this.eventSender();
     };
 
     eventSender = () => {
         console.log('Button pressed');
         var info = {
-            'message': 'Hello whats up?',
+            'message': this.state.messageInfo.message,
             'from': 'devanshponda',
             'to': 'dwiti'
         };
@@ -50,18 +52,17 @@ class ChattingWindow extends Component {
 
     render() {
 
-        this.socket.on('my_event', () => {
-            console.log('Event Registered by client');
-        });
+        // this.socket.on('my_event', () => {
+        //     console.log('Event Registered by client');
+        // });
         this.socket.on('message_to_client', (info) => {
             console.log(info);
-            console.log('Got my event 2');
+            console.log('message');
         });
-        // this.socket.on('Yo wassup', (idx) => {
-        //     console.log("Known: " + this.socket.id);
-        //     console.log("New: " + idx);
-        //     console.log('GOTCHA');
-        // });
+        this.socket.on('magic_event', (idx) => {
+            console.log("Known: " + this.socket.id);
+            console.log("New: " + idx);
+        });
 
         return (
             <div className={'chatting-window'}>
