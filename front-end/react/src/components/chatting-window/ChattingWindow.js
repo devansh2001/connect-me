@@ -9,7 +9,7 @@ class ChattingWindow extends Component {
 
     constructor(props) {
         super(props);
-        var name = Math.random() < 0.5 ? 'devanshponda' : 'dwiti';
+        const name = Math.random() < 0.5 ? 'dponda' : 'vtrivedi';
         this.state = {
             endpoint: 'http://localhost:8080/',
             username: {'name' : name},
@@ -18,6 +18,7 @@ class ChattingWindow extends Component {
                 'to': '',
                 'message': ''
             },
+            currentChatUsername: name
             // socket = socketIOClient(this.state.endpoint, {
             //     'query': this.state.username
             // })
@@ -25,8 +26,13 @@ class ChattingWindow extends Component {
         this.socket = socketIOClient(this.state.endpoint, {
             'query': this.state.username
         });
-        console.log(this.state.username);
     }
+
+    updateCurrentChat = (updatedChat) => {
+        this.setState({
+            currentChatUsername: updatedChat
+        })
+    };
 
     updateMessageInfo = async (messageObj) => {
         console.log('updating message');
@@ -43,8 +49,8 @@ class ChattingWindow extends Component {
         console.log('Button pressed');
         var info = {
             'message': this.state.messageInfo.message,
-            'from': 'devanshponda',
-            'to': 'dwiti'
+            'from': this.state.username.name,
+            'to': this.state.currentChatUsername
         };
         this.socket.emit('message_to_server', info);
     };
@@ -70,7 +76,8 @@ class ChattingWindow extends Component {
                     <Row>
                         <Col xs={3}>
                             <Button onClick={this.eventSender} value={'Bt'}/>
-                            <AllContacts/>
+                            <p>{this.state.username.name}</p>
+                            <AllContacts currentChateeChangeHandler={this.updateCurrentChat}/>
                         </Col>
                         <Col xs={9}>
                             {/* insert the current user info component from issue 21 here*/}
