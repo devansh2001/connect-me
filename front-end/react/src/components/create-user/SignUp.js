@@ -132,6 +132,7 @@ class SignUp extends Component {
                     variant={'primary'}
                     disabled={this.state.isSubmitDisabled}
                     block
+                    href="/"
                 > Submit </Button>
                 </div>
                 <p className="forgot-password text-right">
