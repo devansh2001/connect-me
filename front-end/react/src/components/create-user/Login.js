@@ -93,12 +93,10 @@ class Login extends Component {
                     block
                     href = "/chatting-window"
                 > Submit </Button>
-                </div>
-                {/*
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                </div> 
+                <p className="not-registered-text-right">
+                    Not registered? <a href="/sign-up">Sign Up</a> here!
                 </p>
-                */}
             </form>
             </Container>
             </Row>
