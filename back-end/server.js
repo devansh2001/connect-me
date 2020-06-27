@@ -13,7 +13,7 @@ const app = express();
 const port = 8080;
 
 //mongodb atlas configuration
-const connectionString = "mongodb+srv://connect123:connect123@connect-me-xh3xg.mongodb.net/test?retryWrites=true&w=majority";
+const connectionString = process.env.MONGO_URI;
 const connector = mongoose
    .connect(connectionString, {useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true})
    .then(() => console.log("Connected to MongoDB Atlas"))
