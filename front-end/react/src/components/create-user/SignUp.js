@@ -118,13 +118,14 @@ class SignUp extends Component {
                         onChange = {this.handlePasswordChange}
                     />
                 </div>
-
+                {/*
                 <div className="form-group">
                     <div className="custom-control custom-checkbox">
                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
                         <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                     </div>
                 </div>
+                */}
                 <div className="button-width-controller">
                 <Button
                     type="submit"
@@ -132,10 +133,11 @@ class SignUp extends Component {
                     variant={'primary'}
                     disabled={this.state.isSubmitDisabled}
                     block
+                    href="/"
                 > Submit </Button>
                 </div>
                 <p className="forgot-password text-right">
-                    Already registered? <a href="#">Sign in</a>
+                    Already registered? <a href="/">Log in</a>
                 </p>
             </form>
             </Container>

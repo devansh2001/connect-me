@@ -85,6 +85,8 @@ class AllContacts extends Component {
         // For now I have just console logged it
         // We need API calls here
 
+        this.props.currentChateeChangeHandler(selectedUser);
+
         console.log(selectedUser + " was selected");
     };
 

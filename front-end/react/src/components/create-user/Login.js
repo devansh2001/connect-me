@@ -39,6 +39,7 @@ class Login extends Component {
 
     handleSubmit = () => {
         //insert code here later
+
     };
 
     render() {
@@ -74,13 +75,15 @@ class Login extends Component {
                         onChange = {this.handlePasswordChange}
                     />
                 </div>
-
+                {/*
                 <div className="form-group">
                     <div className="custom-control custom-checkbox">
                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
                         <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                     </div>
                 </div>
+                */}
+                <br></br>
                 <div className="button-width-controller">
                 <Button
                     type="submit"
@@ -88,10 +91,11 @@ class Login extends Component {
                     variant={'primary'}
                     disabled={this.state.isSubmitDisabled}
                     block
+                    href = "/chatting-window"
                 > Submit </Button>
-                </div>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                </div> 
+                <p className="not-registered-text-right">
+                    Not registered? <a href="/sign-up">Sign Up</a> here!
                 </p>
             </form>
             </Container>
