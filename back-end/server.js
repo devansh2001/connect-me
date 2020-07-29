@@ -34,9 +34,11 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 const testRouter = require('./routes/test');
 const sendMessageRouter = require('./routes/SendMessage');
+const createUserRouter = require('./routes/CreateUser');
 
 app.use('/test', testRouter);
 app.use('/send-message', sendMessageRouter);
+app.use('/create-user', createUserRouter);
 
 let clients = new Map();
 
@@ -46,6 +48,7 @@ io.on('connect', socket => {
 
    console.log('Client connected');
 
+
    socket.on('message_to_server', (info) => {
       // console.log(info);
       // console.log(socket.id);
@@ -53,6 +56,8 @@ io.on('connect', socket => {
       console.log('Server logging triggered event');
       console.log("Sending to : " + info['to'] + " - " + clients.get(info['to']));
 
+      // if the socket id for this user DNE, then push to the DB
+      // else send message to user in real time
       io.to(clients.get(info['to'])).emit('message_to_client', info);
    });
 
