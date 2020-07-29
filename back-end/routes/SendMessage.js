@@ -1,3 +1,7 @@
+
+// THIS FILE IS REDUNDANT & HENCE NOT USED
+// SENDING MESSAGES HAS BEEN HANDLED USING WEBSOCKETS IN /back-end/server.js
+
 const router = require('express').Router();
 
 isEmpty = (data) => {
@@ -22,19 +26,6 @@ router.route('/').post((request, response) => {
         response.status(errNum).send(json);
         return;
     }
-
-    // Code to check database if both sender and receiver exist
-
-
-
-
-    // Code to POST this message to the database
-
-
-
-    // ISSUE #11
-    // Code to use web sockets to send this message to the receiver
-
 
     // Success message
     response.status(201).send();
