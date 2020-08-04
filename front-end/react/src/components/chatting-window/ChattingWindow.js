@@ -14,7 +14,7 @@ class ChattingWindow extends Login {
 
     constructor(props) {
         super(props);
-        const name = Math.random() < 0.5 ? 'dponda' : 'vtrivedi';
+        const name = this.props.userName;
         this.state = {
             endpoint: 'http://localhost:8080/',
             username: {'name' : name},
