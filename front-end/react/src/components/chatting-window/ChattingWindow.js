@@ -10,8 +10,9 @@ import ConnectMe from "./left-pane/ConnectMe"
 import { ChatFeed, Message, ChatBubbleProps } from 'react-chat-ui'
 import Login from '../create-user/Login';
 
-class ChattingWindow extends Login {
+const { v4: uuidv4 } = require('uuid');
 
+class ChattingWindow extends Login {
     constructor(props) {
         super(props);
         const name = this.props.userName;
@@ -19,6 +20,7 @@ class ChattingWindow extends Login {
             endpoint: 'http://localhost:8080/',
             username: {'name' : name},
             messageInfo: {
+                'uuid': '0',
                 'from': '',
                 'to': '',
                 'message': ''
@@ -30,6 +32,7 @@ class ChattingWindow extends Login {
             //     'query': this.state.username
             // })
         };
+        this.receivedMessagesIds = new Set();
         this.socket = socketIOClient(this.state.endpoint, {
             'query': this.state.username
         });
@@ -49,27 +52,34 @@ class ChattingWindow extends Login {
                 'message': messageObj
             }
         });
-        await this.eventSender();
+        let uuid = uuidv4();
+        await this.eventSender(uuid);
         await this.updateAllMessages({
+            'uuid': uuid,
             'message': this.state.messageInfo.message,
             'from': this.state.username.name,
             'to': this.state.currentChatUsername
         });
     };
 
-    eventSender = () => {
+    eventSender = async (uuid) => {
         console.log('Button pressed');
-        var info = {
+        let info = {
+            'uuid': uuid,
             'message': this.state.messageInfo.message,
             'from': this.state.username.name,
             'to': this.state.currentChatUsername
         };
-        this.socket.emit('message_to_server', info);
+        await this.socket.emit('message_to_server', info);
     };
 
     updateAllMessages = async (message) => {
         let curr = this.state.allMessages;
 
+        if (this.receivedMessagesIds.has(message.uuid)) {
+            return;
+        }
+        this.receivedMessagesIds.add(message.uuid);
         let id = 1;
         console.log(message['from']);
         console.log(this.state.username.name);
@@ -83,12 +93,34 @@ class ChattingWindow extends Login {
             message: message.message
         });
 
-        if (curr[this.state.currentChatUsername]) {
-            curr[this.state.currentChatUsername].push(formatted);
+        if (id === 1) {
+            if (curr[message['from']]) {
+                curr[message['from']].push(formatted);
+            } else {
+                curr[message['from']] = [];
+                curr[message['from']].push(formatted);
+            }
         } else {
-            curr[this.state.currentChatUsername] = [];
-            curr[this.state.currentChatUsername].push(formatted);
+            if (curr[message['to']]) {
+                curr[message['to']].push(formatted);
+            } else {
+                curr[message['to']] = [];
+                curr[message['to']].push(formatted);
+            }
         }
+
+        console.log(this.state.currentChatUsername);
+        console.log(message['to']);
+
+        // if (curr[this.state.currentChatUsername]) {
+        //     curr[this.state.currentChatUsername].push(formatted);
+        // } else {
+        //     curr[this.state.currentChatUsername] = [];
+        //     curr[this.state.currentChatUsername].push(formatted);
+        // }
+        console.log(curr);
+
+
         // await curr[this.state.currentChatUsername].push(message);
         let initialForce = this.state.force;
         await this.setState({
@@ -101,7 +133,7 @@ class ChattingWindow extends Login {
 
     render() {
         {/*USE THIS USER NAME FOR CHATTING WINDOW FROM LOG IN*/}
-        console.log(this.props.userName)
+        console.log(this.props.userName);
         // this.socket.on('my_event', () => {
         //     console.log('Event Registered by client');
         // });
