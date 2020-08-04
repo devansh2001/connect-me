@@ -8,8 +8,9 @@ import socketIOClient from "socket.io-client";
 import SearchBar from "./left-pane/SearchBar";
 import ConnectMe from "./left-pane/ConnectMe"
 import { ChatFeed, Message, ChatBubbleProps } from 'react-chat-ui'
+import Login from '../create-user/Login';
 
-class ChattingWindow extends Component {
+class ChattingWindow extends Login {
 
     constructor(props) {
         super(props);
@@ -99,7 +100,8 @@ class ChattingWindow extends Component {
     };
 
     render() {
-
+        {/*USE THIS USER NAME FOR CHATTING WINDOW FROM LOG IN*/}
+        console.log(this.props.userName)
         // this.socket.on('my_event', () => {
         //     console.log('Event Registered by client');
         // });
@@ -128,6 +130,7 @@ class ChattingWindow extends Component {
                         </Col>
                         <Col xs={9}>
                             {console.log('GOING IN THERE')}
+                            {/*console.log("show" + this.props.state.userName)*/} 
                             {/* insert the current user info component from issue 21 here*/}
                             <CurrentChat messages={this.state.allMessages[this.state.currentChatUsername] ?
                                 this.state.allMessages[this.state.currentChatUsername] : []}
