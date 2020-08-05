@@ -6,7 +6,8 @@ import AllContacts from "./left-pane/AllContacts";
 import {Row, Col, Container, Button} from 'react-bootstrap';
 import socketIOClient from "socket.io-client";
 import SearchBar from "./left-pane/SearchBar";
-import ConnectMe from "./left-pane/ConnectMe"
+import ConnectMe from "./left-pane/ConnectMe";
+import CurrentChatUser from "./right-pane/CurrentChatUser";
 import { ChatFeed, Message, ChatBubbleProps } from 'react-chat-ui'
 import Login from '../create-user/Login';
 
@@ -153,8 +154,7 @@ class ChattingWindow extends Login {
                 {/*<Container>*/}
                     <Row>
                         <Col xs={3}>
-                            <Row >
-                                <p>{this.state.username.name}</p>
+                            <Row className={'left-pane'}>
                                 <ConnectMe />
                                 <SearchBar/>
                                 <AllContacts currentChateeChangeHandler={this.updateCurrentChat}/>
@@ -162,15 +162,19 @@ class ChattingWindow extends Login {
                         </Col>
                         <Col xs={9}>
                             {console.log('GOING IN THERE')}
-                            {/*console.log("show" + this.props.state.userName)*/} 
-                            {/* insert the current user info component from issue 21 here*/}
-                            <CurrentChat messages={this.state.allMessages[this.state.currentChatUsername] ?
-                                this.state.allMessages[this.state.currentChatUsername] : []}
-                                         username={this.state.username}
-                                         force={this.state.forceReload}
-                            />
-                            <hr/>
-                            <TypeMessageBox sendMessageHandler={this.updateMessageInfo}/>
+                            <Row className={'current-user-pane'}>
+                                {/*console.log("show" + this.props.state.userName)*/} 
+                                    <CurrentChatUser currentChatUsername={this.state.currentChatUsername} 
+                                    force={this.state.forceReload}/>
+                                
+                                <CurrentChat messages={this.state.allMessages[this.state.currentChatUsername] ?
+                                    this.state.allMessages[this.state.currentChatUsername] : []}
+                                            username={this.state.username}
+                                            force={this.state.forceReload}
+                                />
+                                <TypeMessageBox sendMessageHandler={this.updateMessageInfo}/>
+                            </Row>
+                           
                         </Col>
                     </Row>
                 {/*</Container>*/}
