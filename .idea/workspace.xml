@@ -7,7 +7,7 @@
       <change beforePath="$PROJECT_DIR$/back-end/routes/CreateUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/routes/CreateUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/routes/SendMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/routes/SendMessage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back-end/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/react/src/components/create-user/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/components/create-user/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/react/src/components/create-user/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/react/src/components/create-user/Login.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front-end/react/src/components/create-user/SignUp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+            <state relative-caret-position="108">
+              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="83" selection-end-column="57" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -33,10 +33,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back-end/routes/LoginRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back-end/routes/CreateUser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front-end/react/src/components/create-user/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+            <state relative-caret-position="267">
+              <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -89,8 +107,9 @@
         <option value="$PROJECT_DIR$/back-end/models/UserModel.js" />
         <option value="$PROJECT_DIR$/back-end/routes/CreateUser.js" />
         <option value="$PROJECT_DIR$/back-end/server.js" />
-        <option value="$PROJECT_DIR$/back-end/routes/LoginRouter.js" />
         <option value="$PROJECT_DIR$/front-end/react/src/components/create-user/SignUp.js" />
+        <option value="$PROJECT_DIR$/front-end/react/src/components/create-user/Login.js" />
+        <option value="$PROJECT_DIR$/back-end/routes/LoginRouter.js" />
       </list>
     </option>
   </component>
@@ -227,12 +246,12 @@
       <workItem from="1594733432953" duration="35000" />
       <workItem from="1596041427992" duration="79000" />
       <workItem from="1596558733189" duration="4000" />
-      <workItem from="1596593375218" duration="3025000" />
+      <workItem from="1596593375218" duration="3269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20164000" />
+    <option name="totallyTimeSpent" value="20408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="0" width="1600" height="900" extended-state="0" />
@@ -419,20 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back-end/routes/CreateUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back-end/routes/LoginRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back-end/models/UserModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -454,20 +459,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/create-user/Login.js">
+    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/create-user/SignUp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="46" column="23" lean-forward="true" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        <state relative-caret-position="108">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="83" selection-end-column="57" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/create-user/SignUp.js">
+    <entry file="file://$PROJECT_DIR$/back-end/routes/LoginRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="81" column="36" lean-forward="true" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        <state relative-caret-position="294">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/routes/CreateUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/react/src/components/create-user/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

@@ -14,7 +14,7 @@ router.route('/').get((request, res) => {
     // });
 
     UsersTest.find({
-        emailId: request.query['emailId']
+        username: request.query['username']
         // password: request['password']
     }, (err, user) => {
         if (err) {
