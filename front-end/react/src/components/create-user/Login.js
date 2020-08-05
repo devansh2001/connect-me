@@ -50,7 +50,7 @@ class Login extends Component {
         let raw = JSON.stringify(
             {
                 "username": this.state.userName,
-                "password": this.state.password,
+                "password": this.state.password
             });
 
         var requestOptions = {

@@ -3,15 +3,6 @@ const UsersTest = require('../models/UserModel');
 
 router.route('/').get((request, res) => {
     console.log('Logging in User');
-    // let username = request.body['username'];
-    // let password = request.body['password'];
-
-    // const users = new UsersTest({name: username,
-    //     password: password,
-    //     email: emailId,
-    //     firstName: firstName,
-    //     lastName: lastName
-    // });
 
     UsersTest.find({
         username: request.query['username']
