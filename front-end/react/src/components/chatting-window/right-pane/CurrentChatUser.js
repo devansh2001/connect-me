@@ -4,13 +4,13 @@ import devanshPhoto from "./../ProfilePhotos/devanshPhoto.png";
 import prernaPhoto from "./../ProfilePhotos/prernaPhoto.png";
 import vatsalPhoto from "./../ProfilePhotos/vatsalPhoto.png";
 import varunPhoto from "./../ProfilePhotos/varunPhoto.png";
-import burdellPhoto from "./../ProfilePhotos/burdellPhoto.png";
+import profilePhoto from "./../ProfilePhotos/profilePhoto.png";
 
 class CurrentChatuser extends Component {
     render() {
         const userName= this.props.currentChatUsername;
         let fullName = "";
-        let photo = {devanshPhoto}
+        let photo = profilePhoto;
         switch(userName) {
             case "dponda":
                 fullName = "Devansh Ponda"
@@ -28,13 +28,13 @@ class CurrentChatuser extends Component {
                 fullName = "Prerna Ravi"
                 photo = prernaPhoto
                 break;
-            case "THWG":
-                fullName = "George P Burdell"
-                photo = burdellPhoto
+            case "iman":
+                fullName = "Invisible Man"
+                photo = profilePhoto
                 break;
             default: 
                 fullName = "User's Full Name Here"
-                photo = devanshPhoto
+                photo = profilePhoto
         }
         return (
             <Container className={'current-chat-user'} >

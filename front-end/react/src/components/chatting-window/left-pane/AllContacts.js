@@ -5,7 +5,7 @@ import devanshPhoto from "./../ProfilePhotos/devanshPhoto.png";
 import prernaPhoto from "./../ProfilePhotos/prernaPhoto.png";
 import vatsalPhoto from "./../ProfilePhotos/vatsalPhoto.png";
 import varunPhoto from "./../ProfilePhotos/varunPhoto.png";
-import burdellPhoto from "./../ProfilePhotos/burdellPhoto.png";
+import profilePhoto from "./../ProfilePhotos/profilePhoto.png";
 
 
 class AllContacts extends Component {
@@ -16,62 +16,62 @@ class AllContacts extends Component {
                 {
                     name: 'Devansh  Ponda',
                     username: 'dponda',
-                    lastMessage: 'FRIENDS forever <3!',
+                    lastMessage: 'YeetCoding:)',
                     photo: devanshPhoto
                 },
                 {
                     name: 'Vatsal Trivedi',
                     username: 'vtrivedi',
-                    lastMessage: 'Chai + Quarantine',
+                    lastMessage: 'Moving on-campus',
                     photo: vatsalPhoto
                 },
                 {
                     name: 'Varun Kulkarni',
                     username: 'vkulkarni',
-                    lastMessage: 'Dripping Swagg',
+                    lastMessage: "Just kinda vibin'",
                     photo: varunPhoto
                 },
                 {
                     name: 'Prerna Ravi',
                     username: 'pravi',
-                    lastMessage: 'Sorry I zoned out :(',
+                    lastMessage: 'Coffee enthusiast!',
                     photo: prernaPhoto
                 },
                 {
-                    name: 'George P Burdell',
-                    username: 'THWG',
-                    lastMessage: 'Testing if the message is cut if its too long',
-                    photo: burdellPhoto
+                    name: 'Invisible Man',
+                    username: 'iman',
+                    lastMessage: 'Available',
+                    photo: profilePhoto
                 },
                 {
                     name: 'Devansh  Ponda',
                     username: 'dponda',
-                    lastMessage: 'FRIENDS forever <3!',
+                    lastMessage: 'YeetCoding:)',
                     photo: devanshPhoto
                 },
                 {
                     name: 'Vatsal Trivedi',
                     username: 'vtrivedi',
-                    lastMessage: 'Chai + Quarantine',
+                    lastMessage: 'Moving on-campus',
                     photo: vatsalPhoto
                 },
                 {
                     name: 'Varun Kulkarni',
                     username: 'vkulkarni',
-                    lastMessage: 'Dripping Swagg',
+                    lastMessage: "Just kinda vibin'",
                     photo: varunPhoto
                 },
                 {
                     name: 'Prerna Ravi',
                     username: 'pravi',
-                    lastMessage: 'Sorry I zoned out :(',
+                    lastMessage: 'Coffee enthusiast!',
                     photo: prernaPhoto
                 },
                 {
-                    name: 'George P Burdell',
-                    username: 'THWG',
-                    lastMessage: 'Testing if the message is cut if its too long',
-                    photo: burdellPhoto
+                    name: 'Invisible Man',
+                    username: 'iman',
+                    lastMessage: 'Available',
+                    photo: profilePhoto
                 }
             ]
         }
