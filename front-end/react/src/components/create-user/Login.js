@@ -43,8 +43,28 @@ class Login extends Component {
         
     };
 
-    handleSubmit = () => {
-        // update later
+    handleSubmit = async () => {
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        let raw = JSON.stringify(
+            {
+                "username": this.state.userName,
+                "password": this.state.password,
+            });
+
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        let url = 'http://localhost:8080';
+        await fetch(url + "/login", requestOptions)
+            .then(response => response.json())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
 
     };
 
