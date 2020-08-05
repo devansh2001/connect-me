@@ -13,11 +13,15 @@ code {
 }
 
 .chatting-window {
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .type-message-box {
   margin: 20px;
+  width: 100%;
 }
 
 .contact-card {
@@ -26,6 +30,11 @@ code {
 
 .contact-image {
   margin: 10px;
+}
+.contact-image-current {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
 
 .contact-last-message {
@@ -71,13 +80,27 @@ code {
 .all-contacts-container {
   /*padding: 5px;*/
   background-color: #0d2b68;
-  height: 80vh;
+  height: 82vh;
   overflow: scroll;
   
 }
+.current-chat-user{
+  height: 11vh;
+  background-color: #0d2b68;
+  margin-left: 0px;
+}
+.current-user-pane {
+  padding-left:2px;
+}
+.current-user-header {
+  margin-top: 30px;
+  color: white;
+  text-align: left;
+  margin-left: 20px;
+}
 
 .chat-feed-container {
-  height: 82vh;
+  height: 73vh;
   overflow: scroll;
 }
 .form-group {
