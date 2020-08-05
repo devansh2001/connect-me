@@ -35,10 +35,12 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 const testRouter = require('./routes/test');
 const sendMessageRouter = require('./routes/SendMessage');
 const createUserRouter = require('./routes/CreateUser');
+const loginRouter = require('./routes/LoginRouter');
 
 app.use('/test', testRouter);
 app.use('/send-message', sendMessageRouter);
 app.use('/create-user', createUserRouter);
+app.use('/login', loginRouter);
 
 let clients = new Map();
 
