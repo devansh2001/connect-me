@@ -60,7 +60,7 @@ class Login extends Component {
             redirect: 'follow'
         };
 
-        let url = 'http://localhost:8080';
+        let url = 'https://connect-me-app.herokuapp.com/';
         await fetch(url + "/login", requestOptions)
             .then(response => response.json())
             .then(result => console.log(result))

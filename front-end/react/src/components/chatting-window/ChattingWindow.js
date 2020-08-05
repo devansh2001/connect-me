@@ -18,7 +18,7 @@ class ChattingWindow extends Login {
         super(props);
         const name = this.props.userName;
         this.state = {
-            endpoint: 'http://localhost:8080/',
+            endpoint: 'https://connect-me-app.herokuapp.com/',
             username: {'name' : name},
             messageInfo: {
                 'uuid': '0',
