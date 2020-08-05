@@ -56,8 +56,34 @@ class SignUp extends Component {
         });
         
     };
-    handleSubmit = () => {
+    handleSubmit = async () => {
         //insert code here later
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        let raw = JSON.stringify(
+            {
+                "username": this.state.userName,
+                "password": this.state.password,
+                "firstName": this.state.firstName,
+                "lastName": this.state.lastName,
+                "emailId": this.state.email
+            });
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        let url = 'http://localhost:8080';
+        await fetch(url + "/create-user", requestOptions)
+            .then(response => response.json())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+
+
     };
 
     render() {
