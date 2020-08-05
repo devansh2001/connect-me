@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import {Row, Container} from 'react-bootstrap';
 import Contact from "./Contact";
+import devanshPhoto from "./../ProfilePhotos/devanshPhoto.png";
+import prernaPhoto from "./../ProfilePhotos/prernaPhoto.png";
+import vatsalPhoto from "./../ProfilePhotos/vatsalPhoto.png";
+import varunPhoto from "./../ProfilePhotos/varunPhoto.png";
+import burdellPhoto from "./../ProfilePhotos/burdellPhoto.png";
+
 
 class AllContacts extends Component {
     constructor(props) {
@@ -10,52 +16,62 @@ class AllContacts extends Component {
                 {
                     name: 'Devansh  Ponda',
                     username: 'dponda',
-                    lastMessage: 'FRIENDS forever <3!'
+                    lastMessage: 'FRIENDS forever <3!',
+                    photo: devanshPhoto
                 },
                 {
                     name: 'Vatsal Trivedi',
                     username: 'vtrivedi',
-                    lastMessage: 'Chai + Quarantine'
+                    lastMessage: 'Chai + Quarantine',
+                    photo: vatsalPhoto
                 },
                 {
                     name: 'Varun Kulkarni',
                     username: 'vkulkarni',
-                    lastMessage: 'Dripping Swagg'
+                    lastMessage: 'Dripping Swagg',
+                    photo: varunPhoto
                 },
                 {
                     name: 'Prerna Ravi',
                     username: 'pravi',
-                    lastMessage: 'Sorry I zoned out :('
+                    lastMessage: 'Sorry I zoned out :(',
+                    photo: prernaPhoto
                 },
                 {
                     name: 'George P Burdell',
                     username: 'THWG',
-                    lastMessage: 'Testing if the message is cut if its too long'
+                    lastMessage: 'Testing if the message is cut if its too long',
+                    photo: burdellPhoto
                 },
                 {
                     name: 'Devansh  Ponda',
                     username: 'dponda',
-                    lastMessage: 'FRIENDS forever <3!'
+                    lastMessage: 'FRIENDS forever <3!',
+                    photo: devanshPhoto
                 },
                 {
                     name: 'Vatsal Trivedi',
                     username: 'vtrivedi',
-                    lastMessage: 'Chai + Quarantine'
+                    lastMessage: 'Chai + Quarantine',
+                    photo: vatsalPhoto
                 },
                 {
                     name: 'Varun Kulkarni',
                     username: 'vkulkarni',
-                    lastMessage: 'Dripping Swagg'
+                    lastMessage: 'Dripping Swagg',
+                    photo: varunPhoto
                 },
                 {
                     name: 'Prerna Ravi',
                     username: 'pravi',
-                    lastMessage: 'Sorry I zoned out :('
+                    lastMessage: 'Sorry I zoned out :(',
+                    photo: prernaPhoto
                 },
                 {
                     name: 'George P Burdell',
                     username: 'THWG',
-                    lastMessage: 'Testing if the message is cut if its too long'
+                    lastMessage: 'Testing if the message is cut if its too long',
+                    photo: burdellPhoto
                 }
             ]
         }
@@ -70,6 +86,7 @@ class AllContacts extends Component {
                 name={userData[index]['name']}
                 username={userData[index]['username']}
                 lastMessage={userData[index]['lastMessage']}
+                photo={userData[index]['photo']}
             /></Row></div>;
             list.push(card);
         }

@@ -23,12 +23,12 @@ class Contact extends Component {
                 <Card className={'text-left'} >
                     <Row>
                         <Col xs={6} md={4}>
-                            <Image className={'contact-image'} roundedCircle src="https://president.gatech.edu/sites/default/files/images/cabrera-headshot.jpg" fluid />
+                            <Image className={'contact-image'} roundedCircle src={this.props.photo} fluid />
                         </Col>
                         <Col>
                             <Card.Body>
                                 <Row>
-                                    <Card.Title>{this.props.name} (<i>{this.props.username}</i>)</Card.Title>
+                                    <Card.Title>{this.props.name} <br></br>(<i>{this.props.username}</i>)</Card.Title>
                                 </Row>
                                 <Row>
                                     <Card.Text>
